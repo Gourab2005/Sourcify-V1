@@ -1,0 +1,476 @@
+@media (max-width:450px) {
+    body {
+      background-color: black;
+    }
+    .left {
+      display: inline-block;
+      position: absolute;
+      left: 15%;
+      top: 0.5%;
+      padding: 0.4px;
+    }
+    .title {
+      font-size: 35px;
+      color: white;
+    }
+    .bigscreennavbar{
+      display: none;
+    }
+    /* Hamburger menu */
+    #menuToggle {
+      display: block;
+      position: relative;
+      top: 5px;
+      left: 1%;
+      /* Eddited by Gourab */
+      z-index: 1;
+  
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    #menuToggle a {
+      text-decoration: none;
+      color: #232323;
+      transition: color 0.3s ease;
+    }
+    #menuToggle a:hover {
+      color: tomato;
+    }
+    #menuToggle input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+  
+      cursor: pointer;
+  
+      opacity: 0;
+      z-index: 2;
+      -webkit-touch-callout: none;
+    }
+    #menuToggle span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+  
+      background: #cdcdcd;
+      border-radius: 3px;
+  
+      z-index: 1;
+  
+      transform-origin: 4px 0px;
+  
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    #menuToggle input:checked~span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+    }
+    #menuToggle input:checked~span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #menuToggle input:checked~span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+    #menu {
+      position: absolute;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+  
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+  
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+    #menu{
+        width: 300px;
+    }
+    #menu li {
+      padding: 10px 0;
+      font-size: 22px;
+    }
+    #menuToggle input:checked~ul {
+      transform: none;
+    }
+    .title {
+      text-align: center;
+      animation-duration: 1s;
+      animation-name: slidein;
+      background: linear-gradient(to right, red, rgb(255, 162, 0), rgb(5, 216, 249), rgb(253, 57, 247), rgb(253, 253, 7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .para {
+      color: white;
+      text-align: center;
+      animation-duration: 2s;
+      animation-name: slidein;
+    }
+    .resistrationparant {
+      text-align: center;
+    }
+    .resistration {
+      display: inline-block;
+      border: 2px solid cyan;
+      border-radius: 3px;
+      background: rgb(223, 225, 222);
+      box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    }
+    .homeanker1 {
+      text-decoration: none;
+      background-color: aqua;
+      color: black;
+    }
+    
+    
+    
+   /*here key frame*/
+   @keyframes slidein {
+      from {
+        margin-top: 80%;
+      }
+    }
+   
+   
+    .queryheading {
+      display: inline-block;
+      border: 2px solid rgb(11, 241, 3);
+      border-radius: 3px;
+      background: rgb(0, 255, 13);
+      box-shadow: 0 0 5px rgb(0, 255, 0), 0 0 25px rgb(9, 255, 0);
+      animation-duration: 5s;
+      animation-name: slideleft;
+    }
+  
+    .queryheadingparant {
+      text-align: center;
+    }
+    @keyframes slideleft {
+      from {
+        margin-right: 24%;
+      }
+    }
+    .querys {
+      color: black;
+      display: inline-block;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 3px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 0 5px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255);
+      animation-duration: 5s;
+      animation-name: none;
+    }
+    .cebteringquerys {
+      text-align: center;
+    }
+    .contactlinkparant {
+      text-align: center;
+      color: white;
+    }
+    .a1 {
+      background: none;
+    }
+    .contactus {
+      margin-top: 8%;
+      text-align: center;
+      border: 2px solid blue;
+      border-radius: 3px;
+      background: rgb(3, 3, 247);
+      box-shadow: 0 0 5px blue, 0 0 25px blue;
+      animation-duration: 5s;
+      animation-name: none;
+      color: rgb(255, 255, 255);
+      padding: 6px;
+    }
+    .contactus{
+      text-align: center;
+      animation-duration: 2s;
+      animation-name: slidein;
+    }
+    .whatsapp {
+      animation-name: slidein;
+      animation-duration: 3s;
+    }
+  .textdecnone{
+    text-decoration: none;
+    color: black;
+  }
+    .parantdivrespage{
+      text-align: center;
+      margin-top: 4%;
+      animation-name:slidein;
+      animation-duration: 2s;
+    }
+    .parantdivrespage2{
+      text-align: center;
+      margin-top: 4%;
+      animation-name:slidein;
+      animation-duration: 3s;
+    }
+    .btnrespage{
+      display: inline-block;
+      margin: 10px;
+      border: 2px solid rgb(0, 247, 255);
+      border-radius: 3px;
+      background: rgb(3, 247, 247);
+      box-shadow: 0 0 5px rgb(0, 221, 255), 0 0 25px rgb(0, 238, 255);
+      color: rgb(12, 12, 12);
+    }
+    .btnrespage{
+      height: 40px;
+      width: 150px;
+    }
+    .btnrespage2{
+      display: inline-block;
+      margin: 10px;
+      font-size: 15px;
+      border: 2px solid rgb(0, 255, 51);
+      border-radius: 3px;
+      background: rgb(3, 247, 72);
+      box-shadow: 0 0 5px rgb(0, 255, 81), 0 0 25px rgb(0, 255, 21);
+      color: rgb(12, 12, 12);
+  }
+    .btnrespage2{
+      height: 40px;
+      width: 320px;
+      
+    }
+    .bgpage{
+      margin-top: 50%;
+      text-align: center;
+      animation-duration: 2s;
+      animation-name: slidein;
+    }
+    .notice{
+      margin-top: 40px;
+      text-align: center;
+      color: yellow;
+      padding: 4px;
+      border: 2px solid white;
+    }
+    .para2{
+      color: white;
+    }
+    .abpagevideo
+    {
+    display: none;
+    }
+    .abpagevideo
+    {
+    display: none;
+    }
+  }
+   
+  @media(min-width:450px) and (max-width:3000px){
+    body{
+      background-color: black;
+      text-decoration: none;
+    }
+    .header{
+      display: none;
+    }
+    .title{
+      display: inline-block;
+      position: absolute;
+      font-size: 34px;
+      color: white;   
+      padding: 5px;
+      margin-left:1%;
+      background: linear-gradient(to right, red, rgb(255, 162, 0), rgb(5, 216, 249), rgb(253, 57, 247), rgb(253, 253, 7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .para{
+      display: block;
+      text-align: center;
+      margin-top: 3%;
+      color: rgb(255, 255, 255);
+      padding:20px;
+      animation-duration: 2s;
+      animation-name: slidein;
+    }
+    .homeanker1{
+      text-align: center;
+      text-decoration: none;
+      padding: 1px;
+      font-size: 30px;
+      display: inline-block;
+    }
+    .resistrationparant{
+      text-align: center;
+      animation-duration:2s;
+      animation-name: slidein;
+    }
+    .resistration{
+      display: inline-block;
+      color: rgb(22, 20, 20);
+      border: 2px solid cyan;
+      border-radius: 3px;
+      background: cyan;
+      box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    
+    }
+    .resistration{
+         width: 150px;
+    }
+    /* navbar */
+    .middle {
+      display:block;
+      width: 40%;
+      /* margin: 0px 500px; */
+      margin: 2px auto;
+      /* border: 2px solid rgb(8, 203, 63); */
+      border-radius: 60px;
+      /* background-color: black; */
+      margin-left:50%;
+      
+  }
+  .right {
+      position: absolute;
+      right: 7px;
+      top: 10px;
+      display: inline-block;
+      display: none;
+  }
+  
+  .navbar {
+      display: inline-block;
+  }
+  
+  .navbar li {
+      display: inline-block;
+      font-size: 15px;
+  }
+  
+  .navbar li a {
+    color: rgb(22, 20, 20);
+    border: 2px solid rgb(2, 247, 59);
+    border-radius: 3px;
+    background: rgb(0, 255, 55);
+    box-shadow: 0 0 5px rgb(0, 255, 42), 0 0 25px rgb(0, 255, 8);
+    text-decoration: none;
+    padding: 7px 15px;
+  }
+  
+  .navbar li a:hover,
+  .navbar li .active {
+    color: rgb(22, 20, 20);
+    border: 2px solid rgb(239, 245, 240);
+    border-radius: 3px;
+    background: rgb(241, 247, 243);
+    box-shadow: 0 0 5px rgb(249, 250, 249), 0 0 25px rgb(247, 248, 246);
+  }
+  .textdecnone{
+    text-decoration: none;
+    color: black;
+  }
+    .parantdivrespage{
+      text-align: center;
+      margin-top: 10%;
+      animation-name:slidein;
+      animation-duration: 2s;
+    }
+    .parantdivrespage2{
+      text-align: center;
+      animation-name:slidein;
+      animation-duration: 1s;
+    }
+    @keyframes slidein {
+      from {
+        margin-top:100%;
+      }
+    } 
+    .btnrespage{
+      display: inline-block;
+      margin: 10px;
+      border: 2px solid rgb(0, 247, 255);
+      border-radius: 3px;
+      background: rgb(3, 247, 247);
+      box-shadow: 0 0 5px rgb(0, 221, 255), 0 0 25px rgb(0, 238, 255);
+      color: rgb(12, 12, 12);
+    }
+    .btnrespage{
+      height: 50px;
+      width: 600px;
+    }
+    .btnrespage2{
+      display: inline-block;
+      margin: 10px;
+      font-size: 15px;
+      border: 2px solid rgb(0, 255, 51);
+      border-radius: 3px;
+      background: rgb(3, 247, 72);
+      box-shadow: 0 0 5px rgb(0, 255, 81), 0 0 25px rgb(0, 255, 21);
+      color: rgb(12, 12, 12);
+  }
+    .btnrespage2{
+      height: 40px;
+      width: 320px;
+    }
+  .abpara{
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  @keyframes slideleft{
+    from {
+      margin-left: 100%;
+    }
+  }
+  .abpagevideo
+  {
+    text-align: center;
+  }
+  .cebteringquerys{
+    display: inline-block;
+    position: absolute;
+    color: white;
+  }
+  .contactlinkparant {
+    text-align: center;
+    color: white;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  .contactus {
+    margin-top: 0%;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 3px;
+    background: rgb(3, 3, 247);
+    box-shadow: 0 0 5px blue, 0 0 25px blue;
+    animation-duration: 5s;
+    animation-name: none;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+  }
+  .contactus{
+      text-align: center;
+      animation-duration: 2s;
+      animation-name: slidein;
+  }
+  .bgpage{
+    margin-top: 10%;
+    text-align: center;
+    height: 200px;
+  }
+  }
